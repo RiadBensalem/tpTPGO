@@ -27,6 +27,8 @@ public class resoudreController implements Initializable {
     private Label gainMaxtext;
     @FXML
     private ListView listeObj;
+    @FXML
+    private Label msgobjpris;
     private ArrayList<Item> tabObj;
     public void solve()
     {
@@ -44,12 +46,12 @@ public class resoudreController implements Initializable {
             if (solution[k][tmp_j]!=solution[k-1][tmp_j]){
                 list.add(tabObj[k-1].getNumero());
                 tmp_j=tmp_j-tabObj[k-1].getPoid();
-                System.out.print(" _"+tabObj[k-1].getPoid());
             }
 
         }*/
         ObservableList<Integer> items = FXCollections.observableArrayList (list);
         listeObj.setItems(items);
+        msgobjpris.setVisible(true);
         listeObj.setVisible(true);
     }
     public static int[][] resoudre(int nbObj,int w)
@@ -100,5 +102,6 @@ public class resoudreController implements Initializable {
         gainMax.setVisible(false);
         gainMaxtext.setVisible(false);
         listeObj.setVisible(false);
+        msgobjpris.setVisible(false);
     }
 }
