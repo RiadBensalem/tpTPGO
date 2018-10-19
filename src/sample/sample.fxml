@@ -22,15 +22,21 @@
     </rowConstraints>
    <children>
       <VBox prefHeight="207.0" prefWidth="103.0" GridPane.rowIndex="1" GridPane.rowSpan="2">
-          <Button fx:id="buttonTp1" onAction="#tp1" text="TP1">
+          <Button fx:id="buttonTp1" onAction="#tp1" style="-fx-background-color: #e26f18;" text="TP1">
             <VBox.margin>
                <Insets bottom="20.0" />
-            </VBox.margin></Button>
-          <Button fx:id="buttonTp2" onAction="#tp2" text="TP2" />
+            </VBox.margin>
+            <font>
+               <Font size="16.0" />
+            </font></Button>
+          <Button fx:id="buttonTp2" onAction="#tp2" style="-fx-background-color: #e26f18;" text="TP2">
+            <font>
+               <Font name="System Italic" size="16.0" />
+            </font></Button>
       </VBox>
-      <Label text="Binome : BENSALEM BOUSRI" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+      <Label text="Binome : BENSALEM BOUSRI" textAlignment="CENTER" textFill="#afc929" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
          <font>
-            <Font size="22.0" />
+            <Font name="System Bold Italic" size="22.0" />
          </font>
          <effect>
             <Glow />

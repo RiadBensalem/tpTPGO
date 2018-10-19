@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
 
 <GridPane alignment="center" hgap="10" styleClass="root" stylesheets="@maStyle.css" vgap="10" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="graphique.tp1.resoudreController">
     <columnConstraints>
@@ -20,10 +22,22 @@
         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
     </rowConstraints>
-    <Button fx:id="resoudre" onAction="#solve" text="Résoudre le probleme!" GridPane.columnIndex="0" />
-    <Label fx:id="gainMaxtext" text="le gain maximum est : " GridPane.columnIndex="0" GridPane.rowIndex="1" />
-    <Label fx:id="gainMax" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-   <ListView  fx:id="listeObj" GridPane.rowIndex="2" GridPane.columnSpan="2"/>
+    <Button fx:id="resoudre" onAction="#solve" style="-fx-background-color: #e26f18;" text="Résoudre le probleme!" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.halignment="CENTER">
+      <font>
+         <Font name="System Italic" size="16.0" />
+      </font>
+      <GridPane.margin>
+         <Insets top="2.0" />
+      </GridPane.margin></Button>
+    <Label fx:id="gainMaxtext" text="le gain maximum est : " GridPane.columnIndex="0" GridPane.rowIndex="1">
+      <font>
+         <Font name="System Bold" size="15.0" />
+      </font></Label>
+    <Label fx:id="gainMax" GridPane.columnIndex="1" GridPane.rowIndex="1">
+      <font>
+         <Font size="17.0" />
+      </font></Label>
+   <ListView fx:id="listeObj" GridPane.columnSpan="2" GridPane.rowIndex="2" />
 
 
 
