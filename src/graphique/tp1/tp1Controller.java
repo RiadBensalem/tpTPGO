@@ -27,5 +27,6 @@ public class tp1Controller {
         poidsMax=Integer.parseInt(poidMax.getText());
         Main.myStage.setScene(scene);
         Main.myStage.show();
+
     }
 }
