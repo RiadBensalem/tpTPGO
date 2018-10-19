@@ -1,19 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="réalisqtion de lq premiere fenetre et la derniere">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tpgoTp/graphique/maStyle.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tpgoTp/graphique/tp1.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/tpgoTp/sample/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tpgoTp/sample/Controller.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/tpgoTp/sample/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tpgoTp/sample/sample.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tpgoTp/tp1/Item.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphique/tp1/resoudre.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphique/tp1/resoudre.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphique/tp1/resoudreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphique/tp1/resoudreController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphique/tp1/tp1.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphique/tp1/tp1.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphique/tp1/tp1Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphique/tp1/tp1Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/sample.fxml" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -77,11 +68,13 @@
         <counts>
           <entry key="fxml" value="236" />
           <entry key="java" value="516" />
+          <entry key="txt" value="56" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="516" />
+          <entry key="PLAIN_TEXT" value="56" />
           <entry key="XML" value="236" />
         </counts>
       </usages-collector>
@@ -276,7 +269,7 @@
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539982148623" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539982158042" />
     <property name="dynamic.classpath" value="false" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -489,12 +482,20 @@
       <workItem from="1539964412491" duration="1679000" />
       <workItem from="1539966433935" duration="1878000" />
       <workItem from="1539968373489" duration="1782000" />
-      <workItem from="1539971992225" duration="7879000" />
+      <workItem from="1539971992225" duration="8209000" />
     </task>
+    <task id="LOCAL-00001" summary="réalisqtion de lq premiere fenetre et la derniere">
+      <created>1539982257797</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1539982257797</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16921000" />
+    <option name="totallyTimeSpent" value="17251000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
@@ -542,6 +543,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="réalisqtion de lq premiere fenetre et la derniere" />
+    <option name="LAST_COMMIT_MESSAGE" value="réalisqtion de lq premiere fenetre et la derniere" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
