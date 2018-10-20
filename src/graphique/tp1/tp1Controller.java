@@ -19,13 +19,11 @@ public class tp1Controller {
     @FXML
     private TextField poidMax;
 
-    public void next() throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/graphique/tp1/remplirObjs.fxml"));
-        Main.myStage.setTitle("TP1");
-        Scene scene=new Scene(root, 487, 400);
-        nbObjts=Integer.parseInt(nbobj.getText());
+    public void next() throws Exception {
+
+       nbObjts=Integer.parseInt(nbobj.getText());
         poidsMax=Integer.parseInt(poidMax.getText());
-        Main.myStage.setScene(scene);
-        Main.myStage.show();
+      remplirObjsController.start2(Main.myStage);
+
     }
 }

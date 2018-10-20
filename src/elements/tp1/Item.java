@@ -8,11 +8,10 @@ public class Item {
     private long poid;
     private boolean pri;
 
-    public Item(Long poid,long gain)
+    public Item(long poid,long gain)
     {
         setPoid(poid);
         setgain(gain);
-        this.pri=false;
     }
 
     public void setPoid(long poid) {
@@ -27,11 +26,5 @@ public class Item {
     public long getGain() {
         return gain;
     }
-    public boolean getPri() {
-        return this.pri;
 
-    }
-    public void setPri(boolean pri) {
-        this.pri = pri;
-    }
 }
