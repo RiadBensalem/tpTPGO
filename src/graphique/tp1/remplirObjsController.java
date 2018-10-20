@@ -22,17 +22,16 @@ import sample.Main;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class remplirObjsController implements Initializable {
-    public void start2(Stage primaryStage) throws Exception{
+public class remplirObjsController  {
+    static public void start2(Stage primaryStage) throws Exception{
     final ScrollPane sc = new ScrollPane ();
         sc.setFitToHeight(true);
         sc.setFitToWidth(true);
         sc.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
     GridPane root = new GridPane();
-
         root.setGridLinesVisible(false);
     final int numCols = 3 ;
-    final int numRows = 20;
+    final int numRows = 10;
     Label lb1=new Label("Poid");
          lb1.setFont(new Font("Arial", 20));
         root.add(lb1,1,0);
@@ -102,13 +101,5 @@ public class remplirObjsController implements Initializable {
 
 }
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        try {
-            start2(Main.myStage);
 
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
 }
