@@ -9,10 +9,9 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.layout.*;
 import javafx.stage.Stage;
-import javafx.scene.layout.ColumnConstraints;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.RowConstraints;
 import javafx.scene.control.ScrollPane;
 import javafx.geometry.HPos;
 import javafx.geometry.VPos;
@@ -94,17 +93,19 @@ public class remplirObjsController {
                 if (node instanceof TextField) {
                     if (root.getColumnIndex(node) == 1) {
 
-                        valeur = Integer.parseInt(((TextField) node).getText());
+                        poid = Integer.parseInt(((TextField) node).getText());
+                        System.out.print( poid  + "");
                     }
                     if (root.getColumnIndex(node) == 2) {
 
-                        poid = Integer.parseInt(((TextField) node).getText());
+                        valeur = Integer.parseInt(((TextField) node).getText());
+                        System.out.print( valeur + "");
                     }
                     int numero = root.getRowIndex(node);
                     listObj.add(numero-1,new Item(poid,valeur));
                 }
             }
-            Main.myStage.setTitle("TP2");
+            Main.myStage.setTitle("TP1");
             Scene scene=new Scene(root2, 487, 400);
             Main.myStage.setScene(scene);
             Main.myStage.show();
@@ -114,6 +115,10 @@ public class remplirObjsController {
         root.setHalignment(btn, HPos.CENTER);
 
         sc.setContent(root);
+        BackgroundImage myBI=new BackgroundImage(new Image("file:C:/Users/Ryad/workspace/tpgoTp/src/sample/bb.jpg",32,32,false,true),
+                BackgroundRepeat.NO_REPEAT,BackgroundRepeat.NO_REPEAT,BackgroundPosition.DEFAULT,BackgroundSize.DEFAULT);
+        sc.setBackground(new Background(myBI));
+        //root.setBackground(new Background(myBI));
         Main.myStage.setScene(new Scene(sc, 500, 400));
         Main.myStage.show();
 

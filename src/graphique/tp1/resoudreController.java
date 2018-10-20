@@ -4,12 +4,16 @@ import elements.tp1.Item;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import sample.Main;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -29,6 +33,8 @@ public class resoudreController implements Initializable {
     private ListView listeObj;
     @FXML
     private Label msgobjpris;
+    @FXML
+    private Button retour;
     private ArrayList<Item> tabObj=remplirObjsController.listObj;
     public void solve()
     {
@@ -38,7 +44,7 @@ public class resoudreController implements Initializable {
         gainMaxtext.setVisible(true);
         gainMax.setText(Integer.toString(solution[tp1Controller.nbObjts][tp1Controller.poidsMax]));
 
-        tabObj=new ArrayList<Item>();
+
 
         int tmp_j=tp1Controller.poidsMax;
         ArrayList<Integer > list = new ArrayList< Integer >();
@@ -53,6 +59,13 @@ public class resoudreController implements Initializable {
         listeObj.setItems(items);
         msgobjpris.setVisible(true);
         listeObj.setVisible(true);
+        retour.setVisible(true);
+    }
+    public void retour() throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/sample/sample.fxml"));
+        Main.myStage.setTitle("TPGO");
+        Main.myStage.setScene(new Scene(root, 480, 400));
+        Main.myStage.show();
     }
     public static int[][] resoudre(int nbObj,int w)
     {
@@ -87,6 +100,13 @@ public class resoudreController implements Initializable {
                 }
             }
         }
+        for(int i=0 ; i <= nbObj ; i++){
+
+            for(int j=0;j<=w;j++){
+                System.out.print( matrice[i][j] + " | ");
+            }
+            System.out.print(" \n ");
+        }
         return matrice;
     }
     private static int max(int a, int b)
@@ -103,5 +123,6 @@ public class resoudreController implements Initializable {
         gainMaxtext.setVisible(false);
         listeObj.setVisible(false);
         msgobjpris.setVisible(false);
+        retour.setVisible(false);
     }
 }
