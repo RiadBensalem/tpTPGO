@@ -4,12 +4,16 @@ package elements.tp1;
  * Created by Ryad on 19/10/2018.
  */
 public class Item {
+
+
+    private int numero;
     private long gain;
     private long poid;
     private boolean pri;
 
-    public Item(Long poid,long gain)
+    public Item(Long poid, long gain, int numero)
     {
+
         setPoid(poid);
         setgain(gain);
         this.pri=false;
@@ -33,5 +37,12 @@ public class Item {
     }
     public void setPri(boolean pri) {
         this.pri = pri;
+    }
+    public int getNumero() {
+        return numero;
+    }
+
+    public void setNumero(int numero) {
+        this.numero = numero;
     }
 }

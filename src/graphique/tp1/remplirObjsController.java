@@ -1,4 +1,5 @@
 package graphique.tp1;
+import elements.tp1.Item;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -18,7 +19,12 @@ import javafx.scene.text.*;
 import javafx.scene.Node;
 import javafx.collections.ObservableList;
 import sample.Main;
+import java.awt.event.*;
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
 
+
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -76,12 +82,26 @@ public class remplirObjsController  {
         root.getRowConstraints().add(rowConst);
 
     Button btn=new Button("Resoudre");
+        btn.setOnAction((event) -> {
+            Parent root2 = null;
+            try {
+                root2 = FXMLLoader.load(remplirObjsController.class.getResource("/graphique/tp1/resoudre.fxml"));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            Main.myStage.setTitle("TP2");
+            Scene scene=new Scene(root2, 487, 400);
+            Main.myStage.setScene(scene);
+            Main.myStage.show();
+        });
         btn.setPrefSize(100,35);
         root.add(btn,2,numRows+1);
         root.setHalignment(btn,HPos.CENTER);
 
         sc.setContent(root);
+
         Main.myStage.setScene(new Scene(sc, 500, 400));
+
         Main.myStage.show();
     ObservableList<Node> childrens = root.getChildren();
 
@@ -101,5 +121,8 @@ public class remplirObjsController  {
 
 }
 
+void click(){
+
+}
 
 }
