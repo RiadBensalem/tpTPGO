@@ -21,7 +21,8 @@ public class tp1Controller {
 
     public void next() throws Exception {
 
-
+       nbObjts=Integer.parseInt(nbobj.getText());
+        poidsMax=Integer.parseInt(poidMax.getText());
       remplirObjsController.start2(Main.myStage);
 
     }

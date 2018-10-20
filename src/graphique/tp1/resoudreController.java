@@ -29,26 +29,26 @@ public class resoudreController implements Initializable {
     private ListView listeObj;
     @FXML
     private Label msgobjpris;
-    private ArrayList<Item> tabObj;
+    private ArrayList<Item> tabObj=remplirObjsController.listObj;
     public void solve()
     {
         resoudre.setVisible(false);
         int[][] solution=resoudre(tp1Controller.nbObjts,tp1Controller.poidsMax);
         gainMax.setVisible(true);
         gainMaxtext.setVisible(true);
-        gainMax.setText(Integer.toString(solution[tp1Controller.nbObjts+1][tp1Controller.poidsMax+1]));
+        gainMax.setText(Integer.toString(solution[tp1Controller.nbObjts][tp1Controller.poidsMax]));
 
-        tabObj=new ArrayList<Item>();
+
 
         int tmp_j=tp1Controller.poidsMax;
         ArrayList<Integer > list = new ArrayList< Integer >();
-        /*for(int k=tp1Controller.nbObjts;k > 0;k--){
+        for(int k=tp1Controller.nbObjts;k > 0;k--){
             if (solution[k][tmp_j]!=solution[k-1][tmp_j]){
-                list.add(tabObj[k-1].getNumero());
-                tmp_j=tmp_j-tabObj[k-1].getPoid();
+                list.add(k);
+                tmp_j=tmp_j-(int)tabObj.get(k-1).getPoid();
             }
 
-        }*/
+        }
         ObservableList<Integer> items = FXCollections.observableArrayList (list);
         listeObj.setItems(items);
         msgobjpris.setVisible(true);
@@ -56,7 +56,7 @@ public class resoudreController implements Initializable {
     }
     public static int[][] resoudre(int nbObj,int w)
     {
-        ArrayList<Item> listObj=new ArrayList<Item>();
+        ArrayList<Item> listObj=remplirObjsController.listObj;
 /*
         for (int idx=0;idx<nbObj;idx++)
         {
@@ -86,6 +86,13 @@ public class resoudreController implements Initializable {
                     }
                 }
             }
+        }
+        for(int i=0 ; i <= nbObj ; i++){
+
+            for(int j=0;j<=w;j++){
+                System.out.print( matrice[i][j] + " | ");
+            }
+            System.out.print(" \n ");
         }
         return matrice;
     }
